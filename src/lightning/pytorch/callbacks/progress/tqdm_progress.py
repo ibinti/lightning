@@ -24,10 +24,12 @@ from lightning.pytorch.utilities.types import STEP_OUTPUT
 # check if ipywidgets is installed before importing tqdm.auto
 # to ensure it won't fail and a progress bar is displayed
 
-if importlib.util.find_spec("ipywidgets") is not None:
-    from tqdm.auto import tqdm as _tqdm
-else:
-    from tqdm import tqdm as _tqdm
+# if importlib.util.find_spec("ipywidgets") is not None:
+#     from tqdm.auto import tqdm as _tqdm
+# else:
+#     from tqdm import tqdm as _tqdm
+"ibi"
+from tqdm.notebook import tqdm as _tqdm
 
 import lightning.pytorch as pl
 from lightning.pytorch.callbacks.progress.progress_bar import ProgressBar
